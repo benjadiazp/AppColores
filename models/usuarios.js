@@ -1,3 +1,8 @@
+const {
+    obtenerLista: obtenerListaColores,
+    eliminarColor: eliminarColor
+} = require('./colores');
+
 var lista = [
     {
         "usuario": "usuario1",
@@ -43,6 +48,11 @@ function eliminarUsuario(usuario)
         }));
         if (index >= 0) {
             lista.splice(index, 1);
+            obtenerListaColores().then(res => {
+                res.find(color => {
+                    if(color.autor == usuario) eliminarColor(color.color);
+                })
+            });
             resolve("Usuario eliminado");
         }
         else resolve("No se encuentra el usuario");

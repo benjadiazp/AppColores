@@ -6,6 +6,11 @@ var lista = [
     {
         "color": "rojo",
         "rgb": "#ff0009"
+    },
+    {
+        "color": "amarillo",
+        "rgb": "#ffd402",
+        "autor": "usuario1"
     }
 ];
 
