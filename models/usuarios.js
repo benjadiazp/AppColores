@@ -59,6 +59,13 @@ function eliminarUsuario(usuario)
     })
 }
 
+function modificarColor(color)
+{
+    return new Promise((resolve, reject) => {
+        let index = lista.indexOf(lista)
+    })
+}
+
 
 module.exports = {
     agregarUsuario,
