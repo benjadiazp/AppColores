@@ -40,4 +40,8 @@ router.delete('/:color', function(req, res)
     })
 });
 
+router.put('/:color')
+{
+
+}
 module.exports = router;
