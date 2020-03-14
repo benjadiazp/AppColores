@@ -54,10 +54,22 @@ function eliminarColor(color)
     })
 }
 
+function modificarColor(color)
+{
+    let index = lista.indexOf(lista.find(elemento => {
+        return elemento.color == color.color;
+    }));
+    if (index >= 0) {
+        lista[index] = color;
+        resolve("Color eliminado");
+    }
+    else resolve("No se encuentra el color");
+}
 
 module.exports = {
     agregarColor,
     obtenerLista,
     obtenerColor,
-    eliminarColor
+    eliminarColor,
+    modificarColor
 };

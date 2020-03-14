@@ -3,7 +3,8 @@ const
         agregarColor: modelAgregarColor,
         obtenerLista: modelObtenerLista,
         obtenerColor: modelOBtenerColor,
-        eliminarColor: modelEliminarColor
+        eliminarColor: modelEliminarColor,
+        modificarColor: modelModificarColor
     } =  require('../models/colores');
 
 function agregarColor(color)
@@ -35,11 +36,19 @@ function eliminarColor(color)
     })
 }
 
+function modificarColor(color)
+{
+    return modelModificarColor(color).then(resultado => {
+        return {status: 200, body: resultado};
+    })
+}
+
 
 
 module.exports = {
     agregarColor,
     obtenerLista,
     obtenerColor,
-    eliminarColor
+    eliminarColor,
+    modificarColor
 }
